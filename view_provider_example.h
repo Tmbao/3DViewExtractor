@@ -40,7 +40,7 @@ public:
             rotate(up_x, up_z, step * delta);
             ++name[0];
             views.push_back(ViewConfiguration(
-                CameraPosition(pos_x, pos_y, pos_z, 0, 0, 0, up_x, up_y, up_z),
+                CameraPosition(pos_x, pos_y, pos_z, 0, 0, 0, up_x - pos_x, up_y - pos_y, up_z - pos_z),
                 name));
         }
         for (int step = 0; step < 8; ++step) {
@@ -56,7 +56,7 @@ public:
             rotate(up_x, up_z, step * delta);
             ++name[0];
             views.push_back(ViewConfiguration(
-                CameraPosition(pos_x, pos_y, pos_z, 0, 0, 0, up_x, up_y, up_z),
+                CameraPosition(pos_x, pos_y, pos_z, 0, 0, 0, up_x - pos_x, up_y - pos_y, up_z - pos_z),
                 name));
         }
         for (int step = 0; step < 8; ++step) {
@@ -72,7 +72,7 @@ public:
             rotate(up_x, up_z, step * delta);
             ++name[0];
             views.push_back(ViewConfiguration(
-                CameraPosition(pos_x, pos_y, pos_z, 0, 0, 0, up_x, up_y, up_z),
+                CameraPosition(pos_x, pos_y, pos_z, 0, 0, 0, up_x - pos_x, up_y - pos_y, up_z - pos_z),
                 name));
         }
 
