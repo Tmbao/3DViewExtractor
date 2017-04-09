@@ -34,12 +34,16 @@ pcl::PolygonMesh load(const std::string &path) {
 }
 
 
-int main(int argc, char const *argv[])
-{
-    if (argc == 2) {
+int main(int argc, char const *argv[]) {
+    if (argc >= 2) {
         auto mesh = load(argv[1]);
-        std::string prefix, _;
-        split_path(argv[1], prefix, _);
+        std::string prefix;
+        if (argc == 2) {
+            std::string _;
+            split_path(argv[1], prefix, _);
+        } else {
+            prefix = argv[2];
+        }
         extract_view(mesh, new ViewProviderExample(), prefix);
         return 0;
     } else {

@@ -18,8 +18,9 @@ make
 
 ## How to run
 ```
-./extractor <path-to-mesh>
+./extractor <path-to-mesh> <output-folder>
 # E.g.:
-./extractor ../data/bus.off
+# ./extractor ../data/bus.off 
+# ./extractor ../data/bus.off ../output
 ```
-2D views will be available in the same folder with the mesh file.
+If `output-folder` is not specified, 2D outputs will be stored in the same folder with the mesh file.
