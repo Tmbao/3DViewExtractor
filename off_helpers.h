@@ -10,9 +10,7 @@
 #include <pcl/point_cloud.h>
 
 
-pcl::PolygonMesh load_off(const std::string& path) {
-    pcl::PolygonMesh mesh;
-
+void loadOFFFile(const std::string& path, pcl::PolygonMesh &mesh) {
     std::ifstream ifs(path, std::ifstream::in);
 
     // Ignore the first line
@@ -45,8 +43,6 @@ pcl::PolygonMesh load_off(const std::string& path) {
     }
 
     ifs.close();
-
-    return mesh;
 }
 
 #endif

@@ -18,8 +18,8 @@ make
 
 ## How to run
 ```
-./extractor <path-to-off>
+./extractor <path-to-mesh>
 # E.g.:
 ./extractor ../data/bus.off
 ```
-2D views will be available in the same folder with the off file.
+2D views will be available in the same folder with the mesh file.
